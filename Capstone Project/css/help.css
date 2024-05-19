@@ -1,0 +1,80 @@
+body {
+    font-family: 'Roboto', sans-serif; /* Updated font */
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+header {
+    background-color: #006064; /* Dark cyan header */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0; /* Adjusted padding */
+}
+
+main {
+    padding: 40px 20px; /* Increased padding */
+}
+
+h1, h2, h3 {
+    color: #4CAF50;
+}
+
+section {
+    background: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: #f9f9f9;
+    margin: 10px 0; /* Increased margin */
+    padding: 15px; /* Increased padding */
+    border-radius: 6px; /* Slightly rounded corners */
+}
+
+ul li a {
+    color: #006064; /* Dark cyan */
+    text-decoration: none;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+a {
+    color: #006064; /* Dark cyan */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 20px; /* Adjusted padding */
+    }
+
+    section {
+        padding: 15px; /* Adjusted padding */
+    }
+}

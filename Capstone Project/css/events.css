@@ -1,0 +1,159 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif; /* Updated font */
+    background-color: #222;
+    color: #ddd;
+}
+
+header {
+    background-color: #006064; /* Dark cyan header */
+    padding: 20px; /* Increased padding */
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    color: #fff;
+}
+
+.navigation-menu ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Increased gap */
+}
+
+.navigation-menu li {
+    display: inline;
+}
+
+.navigation-menu a {
+    color: #ddd;
+    text-decoration: none;
+    padding: 10px 20px; /* Increased padding */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s;
+}
+
+.navigation-menu a:hover {
+    background-color: #444;
+}
+
+main {
+    padding: 40px 20px; /* Increased padding */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#upcoming-events .event-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.event-item {
+    background-color: #333;
+    padding: 20px; /* Increased padding */
+    border-radius: 10px; /* Rounded corners */
+    text-align: center;
+}
+
+.event-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Rounded corners */
+}
+
+.event-item h3 {
+    color: #fff;
+}
+
+.event-item p {
+    color: #ccc;
+}
+
+.event-item button {
+    background-color: #43a047; /* Green color */
+    color: #fff;
+    padding: 12px 24px; /* Increased padding */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.event-item button:hover {
+    background-color: #388e3c; /* Darker green on hover */
+}
+
+#event-calendar {
+    margin-top: 40px;
+}
+
+#add-event-btn {
+    background-color: #2ecc71;
+    color: #fff;
+    padding: 12px 24px; /* Increased padding */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 20px;
+}
+
+#add-event-btn:hover {
+    background-color: #27ae60;
+}
+
+#add-event-form {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    margin-top: 20px;
+}
+
+#add-event-form label {
+    display: block;
+    margin-bottom: 10px; /* Increased margin */
+    color: #aaa;
+}
+
+#add-event-form input,
+#add-event-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px; /* Increased margin */
+    border: 1px solid #444;
+    border-radius: 5px; /* Rounded corners */
+    background-color: #333;
+    color: #ddd;
+}
+
+#add-event-form button {
+    background-color: #43a047; /* Green color */
+    color: #fff;
+    padding: 12px 24px; /* Increased padding */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#add-event-form button:hover {
+    background-color: #388e3c; /* Darker green on hover */
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    background-color: #333;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    color: #ccc;
+}

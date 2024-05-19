@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - 2D MetaLand</title>
+    <link rel="stylesheet" href="../css/shop.css">
+</head>
+<body>
+    <header>
+        <h1>Shop</h1>
+        <nav class="navigation-menu">
+            <ul>
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="../index.html#profile">Profile</a></li>
+                <li><a href="../index.html#social-hub">Social Hub</a></li>
+                <li><a href="../index.html#games">Games</a></li>
+                <li><a href="../index.html#events">Events</a></li>
+                <li><a href="shop.html">Shops</a></li>
+                <li><a href="../index.html#help">Help</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="shop-items">
+            <h2>Our Electronics Shop</h2>
+            <div class="shop-grid">
+                <div class="shop-item">
+                    <img src="../assets//images/laptop.jpg" alt="Laptop">
+                    <h3>Laptop</h3>
+                    <p>$1000.00 each</p>
+                    <button onclick="addToCart('Laptop', 1000.00)">Add to Cart</button>
+                </div>
+                <div class="shop-item">
+                    <img src="../assets//images/phone.jpg" alt="Smartphone">
+                    <h3>Smartphone</h3>
+                    <p>$500.00 each</p>
+                    <button onclick="addToCart('Smartphone', 500.00)">Add to Cart</button>
+                </div>
+                <div class="shop-item">
+                    <img src="../assets/images/headphone.jpg" alt="Headphones">
+                    <h3>Headphones</h3>
+                    <p>$50.00 each</p>
+                    <button onclick="addToCart('Headphones', 50.00)">Add to Cart</button>
+                </div>
+                <!-- Add more items as needed -->
+            </div>
+        </section>
+        <section id="cart">
+            <h2>Shopping Cart</h2>
+            <ul id="cart-items"></ul>
+            <p id="total-price">Total: $0.00</p>
+            <button onclick="redirectToPayment()">Checkout</button>
+
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="../js/shop.js"></script>
+    <script src="../js/shop3D.js"></script> <!-- Include your Three.js script here -->
+    <footer>
+        <p>&copy; 2024 MetaLand 1.0. All rights reserved.</p>
+    </footer>
+    <script>
+        function redirectToPayment() {
+    // Get the current total from the page
+    var totalPrice = document.getElementById("total-price").textContent.split(": ")[1];
+    // Construct the URL with the total as a query parameter
+    var paymentURL = "payment.html?total=" + encodeURIComponent(totalPrice);
+    // Redirect to the payment page
+    window.location.href = paymentURL;
+}
+
+    </script>
+</body>
+</html>

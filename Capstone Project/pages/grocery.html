@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - 2D MetaLand</title>
+    <link rel="stylesheet" href="../css/shop.css">
+</head>
+<body>
+    <header>
+        <h1>Shop</h1>
+        <nav class="navigation-menu">
+            <ul>
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="../index.html#profile">Profile</a></li>
+                <li><a href="../index.html#social-hub">Social Hub</a></li>
+                <li><a href="../index.html#games">Games</a></li>
+                <li><a href="../index.html#events">Events</a></li>
+                <li><a href="shop.html">Shops</a></li>
+                <li><a href="../index.html#help">Help</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="shop-items">
+            <h2>Our Grocery Shop</h2>
+            <div class="shop-grid">
+                <div class="shop-item">
+                    <img src="../assets/images/apple.jpg" alt="Apple">
+                    <h3>Apple</h3>
+                    <p>$1.00 each</p>
+                    <button onclick="addToCart('Apple', 1.00)">Add to Cart</button>
+                </div>
+                <div class="shop-item">
+                    <img src="../assets/images/banana.jpg" alt="Banana">
+                    <h3>Banana</h3>
+                    <p>$0.50 each</p>
+                    <button onclick="addToCart('Banana', 0.50)">Add to Cart</button>
+                </div>
+                <div class="shop-item">
+                    <img src="../assets//images/carrot.jpg" alt="Carrot">
+                    <h3>Carrot</h3>
+                    <p>$0.30 each</p>
+                    <button onclick="addToCart('Carrot', 0.30)">Add to Cart</button>
+                </div>
+                <!-- Add more items as needed -->
+            </div>
+        </section>
+        <section id="cart">
+            <h2>Shopping Cart</h2>
+            <ul id="cart-items"></ul>
+            <p id="total-price">Total: $0.00</p>
+            <button onclick="checkout()">Checkout</button>
+        </section>
+        <section id="shop-video">
+            <h2>Our Shop Video</h2>
+            <video controls width="600">
+                <source src="../assets/shop-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 MetaLand 1.0. All rights reserved.</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="../js/shop.js"></script>
+</body>
+</html>

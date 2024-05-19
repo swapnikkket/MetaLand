@@ -1,0 +1,500 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Updated font-family */
+    background-color: #e0f7fa; /* Softer background color */
+    color: #212121; /* Darker text color */
+}
+
+header {
+    background-color: #006064; /* Dark cyan header */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added shadow */
+}
+
+.welcome-banner {
+    padding: 60px 20px; /* Increased padding */
+    background: url('assets/images/banner.jpg') no-repeat center center/cover;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+    color: #fff; /* White text for better contrast */
+}
+
+.welcome-banner h1 {
+    font-size: 3.5em; /* Larger font size */
+    margin: 0;
+    animation: slideInFromLeft 1s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
+}
+
+.welcome-banner p {
+    font-size: 1.5em; /* Larger font size */
+    margin: 20px 0 30px;
+    animation: slideInFromRight 1s ease-in-out;
+}
+
+.welcome-banner a {
+    display: inline-block;
+    padding: 15px 25px; /* Increased padding */
+    color: #006064; /* Matching background color */
+    background-color: #fff; /* White background */
+    text-decoration: none;
+    border-radius: 30px; /* More rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Added shadow */
+}
+
+.welcome-banner a:hover {
+    background-color: #004d40; /* Darker cyan on hover */
+    color: #fff; /* White text on hover */
+}
+
+.navigation-menu ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.navigation-menu li {
+    margin: 0 20px; /* Increased margin */
+}
+
+.navigation-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em; /* Slightly larger font size */
+    transition: color 0.3s ease;
+}
+
+.navigation-menu a:hover {
+    color: #e0f7fa; /* Light cyan on hover */
+}
+
+main {
+    padding: 40px 20px; /* Increased padding */
+}
+
+section {
+    margin-bottom: 50px; /* Increased margin */
+    text-align: center;
+}
+
+.featured-areas {
+    background-color: #004d40; /* Darker cyan */
+    color: #fff;
+    padding: 50px 20px; /* Increased padding */
+    animation: fadeIn 2s ease-in-out;
+}
+
+.featured-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fff;
+    color: #333;
+    border-radius: 15px; /* More rounded corners */
+    width: 320px; /* Adjusted width */
+    margin: 20px;
+    padding: 25px; /* Increased padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.card img {
+    width: 100%;
+    border-radius: 15px 15px 0 0; /* Rounded top corners */
+}
+
+.auth-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Increased gap */
+    animation: fadeIn 2s ease-in-out;
+}
+
+.auth-buttons button {
+    padding: 15px 30px; /* Increased padding */
+    font-size: 1.1em; /* Larger font size */
+    border: none;
+    border-radius: 30px; /* More rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.auth-buttons button:first-of-type {
+    background-color: #43a047; /* Green color */
+    color: #fff;
+}
+
+.auth-buttons button:first-of-type:hover {
+    background-color: #388e3c; /* Darker green on hover */
+}
+
+.auth-buttons button:last-of-type {
+    background-color: #fdd835; /* Yellow color */
+    color: #212121;
+}
+
+.auth-buttons button:last-of-type:hover {
+    background-color: #fbc02d; /* Darker yellow on hover */
+}
+
+.news-updates .news-item {
+    background-color: #fff;
+    padding: 25px; /* Increased padding */
+    margin: 20px 0;
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+    text-align: left;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+footer {
+    background-color: #004d40; /* Darker cyan */
+    color: #fff;
+    padding: 50px 20px; /* Increased padding */
+    text-align: left;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    margin: 20px;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px; /* Increased margin */
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 10px 0; /* Increased margin */
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #e0f7fa; /* Light cyan on hover */
+}
+
+.footer-section p {
+    margin: 10px 0; /* Increased margin */
+}
+
+footer img {
+    width: 35px; /* Increased size */
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+footer img:hover {
+    transform: scale(1.1);
+}
+
+footer p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInFromLeft {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes slideInFromRight {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.community-section {
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 400px; /* Adjust height as needed */
+}
+
+.highlights-container {
+    display: flex;
+    gap: 20px; /* Adjust gap between highlights */
+    padding: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
+
+.highlight {
+    flex: 0 0 auto;
+    width: 320px; /* Adjust width of each highlight */
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 20px; /* Increased padding */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.highlight img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.highlight p {
+    margin-top: 0;
+}
+
+.testimonial-section {
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 300px; /* Adjust height as needed */
+}
+
+.testimonials-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.testimonial {
+    max-width: 400px; /* Adjust width of each testimonial */
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.testimonial p {
+    margin-bottom: 10px;
+}
+
+.testimonial h4 {
+    margin: 0;
+    font-style: italic;
+}
+
+.creator-section {
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 300px; /* Adjust height as needed */
+}
+
+.creators-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    padding: 20px;
+}
+
+.creator {
+    flex: 0 0 auto;
+    max-width: 300px; /* Adjust width of each creator */
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+    transition: transform 0.3s ease-in-out;
+}
+
+.creator:hover {
+    transform: translateY(-5px);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.creator img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.creator h3 {
+    margin: 0;
+}
+
+.creator p {
+    margin: 0;
+}
+
+/* Hide dropdown content by default */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+/* Position the dropdown content */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Style the links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of links on hover */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Icon styles */
+.icon {
+    font-size: 1.5rem; /* Enlarge the icon size */
+    margin-right: 10px; /* Add some spacing between icons */
+    transition: transform 0.3s ease-in-out; /* Add animation */
+}
+
+.icon:hover {
+    transform: scale(1.2); /* Enlarge the icon on hover */
+}
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.social-icons {
+    display: flex;
+}
+
+.social-icons a {
+    color: white;
+    margin-right: 10px;
+}
+.footer-section {
+    flex: 1;
+    margin-right: 20px; /* Adjust spacing between sections */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center; /* Align icons horizontally */
+    margin-top: 10px; /* Add space between Follow Us text and icons */
+}
+
+.social-icons a {
+    margin: 0 10px; /* Adjust spacing between icons */
+}
+/* Existing styles... */
+
+/* Animation classes */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat - MetaLand</title>
+    <link rel="stylesheet" href="../css/chat.css">
+</head>
+<body class="dark-theme">
+    <header>
+        <h1>Chat Interface</h1>
+        <nav class="navigation-menu">
+            <ul>
+                <li><a href="../main.html">Home</a></li>
+                <li><a href="grocery.html">Shop</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="help.html">Help</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="chat-container">
+            <div class="chat-header">
+                <h2>Chat Room</h2>
+                <button id="theme-toggle" class="theme-toggle">Switch to Light Theme</button>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <!-- Predefined chat messages -->
+                <div class="chat-message self">Hi!</div>
+                <div class="chat-message other">Hello!</div>
+            </div>
+            <form id="chat-form" class="chat-form">
+                <input type="text" id="chat-input" class="chat-input" placeholder="Type a message..." required>
+                <button type="submit" class="send-button">Send</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 MetaLand. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('light-theme');
+            body.classList.toggle('dark-theme');
+            if (body.classList.contains('light-theme')) {
+                themeToggle.textContent = 'Switch to Dark Theme';
+            } else {
+                themeToggle.textContent = 'Switch to Light Theme';
+            }
+        });
+
+        // Predefined responses
+        const responses = [
+            "That sounds interesting!",
+            "Tell me more.",
+            "I agree!",
+            "That's cool!",
+            "Wow, really?",
+            "Fascinating!"
+        ];
+
+        // Chat functionality (for demonstration purposes)
+        const chatForm = document.getElementById('chat-form');
+        const chatInput = document.getElementById('chat-input');
+        const chatMessages = document.getElementById('chat-messages');
+        let isSelfMessage = true; // To track if the message is sent by self or other
+
+        chatForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const message = chatInput.value.trim();
+            if (message) {
+                const messageElement = document.createElement('div');
+                messageElement.classList.add('chat-message', isSelfMessage ? 'self' : 'other');
+                messageElement.textContent = message;
+                chatMessages.appendChild(messageElement);
+                chatInput.value = '';
+                chatMessages.scrollTop = chatMessages.scrollHeight; // Scroll to the bottom
+                if (isSelfMessage) {
+                    setTimeout(() => {
+                        const response = responses[Math.floor(Math.random() * responses.length)];
+                        const responseElement = document.createElement('div');
+                        responseElement.classList.add('chat-message', 'other');
+                        responseElement.textContent = response;
+                        chatMessages.appendChild(responseElement);
+                        chatMessages.scrollTop = chatMessages.scrollHeight; // Scroll to the bottom
+                    }, 1000);
+                }
+                isSelfMessage = !isSelfMessage; // Toggle between self and other messages
+            }
+        });
+    </script>
+</body>
+</html>

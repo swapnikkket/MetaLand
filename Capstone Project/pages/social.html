@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Hub - MetaLand 1.0</title>
+    <link rel="stylesheet" href="../css/social.css">
+</head>
+<body>
+    <header>
+        <h1>Social Hub</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="jobs.html">Jobs/Freelance</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="shops.html">Shops</a></li>
+                <li><a href="help.html">Help</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="welcome">
+            <h2>Welcome to the Social Hub</h2>
+            <p>Connect, chat, and engage with other members of the MetaLand 1.0 community.</p>
+        </section>
+
+        <section id="user-feed">
+            <h2>User Feed</h2>
+            <div class="feed-post">
+                <img src="../assets/images/profile3.png" alt="User 1">
+                <div class="post-content">
+                    <h3>Sydney Sweeney</h3>
+                    <p>Just visited the new virtual park! It's amazing!</p>
+                    <button>Like</button>
+                    <button>Comment</button>
+                </div>
+            </div>
+            <div class="feed-post">
+                <img src="../assets/images/profile1 (1).png" alt="User 2">
+                <div class="post-content">
+                    <h3>James</h3>
+                    <p>Anyone up for a game tonight?</p>
+                    <button>Like</button>
+                    <button>Comment</button>
+                </div>
+            </div>
+            <!-- Additional posts as needed -->
+        </section>
+
+        <section id="groups">
+            <h2>Groups</h2>
+            <div class="group">
+                <img src="../assets/images/profile1 (1).png" alt="Group 1">
+                <div class="group-content">
+                    <h3>Gaming Enthusiasts</h3>
+                    <p>Join our group to discuss the latest games and strategies.</p>
+                    <button>Join Group</button>
+                </div>
+            </div>
+            <div class="group">
+                <img src="../assets/images/profile1 (2).png" alt="Group 2">
+                <div class="group-content">
+                    <h3>Art Lovers</h3>
+                    <p>Share your artwork and appreciate others' creations.</p>
+                    <button>Join Group</button>
+                </div>
+            </div>
+            <!-- Additional groups as needed -->
+        </section>
+
+        <section id="chatrooms">
+            <h2>Chatrooms</h2>
+            <div class="chatroom">
+                <h3>General Chat</h3>
+                <p>Discuss anything and everything with other members.</p>
+                <button class="joinChatBtn" data-url="chat.html">Join Chat</button>
+            </div>
+            <div class="chatroom">
+                <h3>Event Planning</h3>
+                <p>Coordinate and plan upcoming events with others.</p>
+                <button class="joinChatBtn" data-url="chat.html">Join Chat</button>
+            </div>
+            <!-- Additional chatrooms as needed -->
+        </section>
+        
+    </main>
+    <footer>
+        <p>&copy; 2024 MetaLand 1.0. All rights reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const joinChatButtons = document.querySelectorAll('.joinChatBtn');
+            joinChatButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const chatUrl = button.getAttribute('data-url');
+                    window.location.href = chatUrl;
+                });
+            });
+        });
+    </script>
+    
+</body>
+</html>

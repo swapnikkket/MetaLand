@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - 2D MetaLand</title>
+    <link rel="stylesheet" href="../css/events.css">
+</head>
+<body>
+    <header>
+        <h1>Events</h1>
+        <nav class="navigation-menu">
+            <ul>
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="../index.html#profile">Profile</a></li>
+                <li><a href="../index.html#social-hub">Social Hub</a></li>
+                <li><a href="../index.html#games">Games</a></li>
+                <li><a href="../index.html#events">Events</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="../index.html#help">Help</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="upcoming-events">
+            <h2>Upcoming Events</h2>
+            <div class="event-list"></div>
+            <button id="add-event-btn">Add Event</button>
+        </section>
+        <section id="event-calendar">
+            <h2>Event Calendar</h2>
+            <div id="calendar"></div>
+        </section>
+        <section id="add-event-form" class="hidden">
+            <h2>Add New Event</h2>
+            <form>
+                <label for="event-title">Title:</label>
+                <input type="text" id="event-title" required>
+                <label for="event-date">Date:</label>
+                <input type="date" id="event-date" required>
+                <label for="event-location">Location:</label>
+                <input type="text" id="event-location" required>
+                <label for="event-description">Description:</label>
+                <textarea id="event-description" required></textarea>
+                <button type="submit">Add Event</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 MetaLand 1.0. All rights reserved.</p>
+    </footer>
+    <script src="../js/events.js"></script>
+</body>
+</html>

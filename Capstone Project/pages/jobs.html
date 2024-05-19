@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listings - MetaLand</title>
+    <link rel="stylesheet" href="../css/jobs.css">
+</head>
+<body>
+    <header>
+        <h1>Available Jobs</h1>
+        <nav class="navigation-menu">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="grocery.html">Shop</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="help.html">Help</a></li>
+                <li><a href="jobs.html" class="active">Jobs</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="job-listings">
+            <div id="job-container"></div>
+            <button id="add-job-button" class="add-job-button">Add Job</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 MetaLand 1.0. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Sample job listings array
+        let jobs = [
+            { title: "Software Engineer", description: "Develop and maintain web applications." },
+            { title: "Graphic Designer", description: "Create visual concepts to communicate ideas." },
+            { title: "Project Manager", description: "Oversee projects from inception to completion." },
+            { title: "Data Analyst", description: "Analyze data to help make informed business decisions." }
+        ];
+
+        // Function to display job listings
+        function displayJobs() {
+            const jobContainer = document.getElementById('job-container');
+            jobContainer.innerHTML = ''; // Clear previous content
+            jobs.forEach((job, index) => {
+                const jobElement = document.createElement('div');
+                jobElement.classList.add('job');
+
+                const jobTitle = document.createElement('h2');
+                jobTitle.textContent = `${index + 1}. ${job.title}`;
+
+                const jobDescription = document.createElement('p');
+                jobDescription.textContent = job.description;
+
+                const chatButton = document.createElement('button');
+                chatButton.textContent = "Communicate";
+                chatButton.onclick = () => {
+                    window.location.href = "../pages/chat.html";
+                };
+
+                jobElement.appendChild(jobTitle);
+                jobElement.appendChild(jobDescription);
+                jobElement.appendChild(chatButton);
+
+                jobContainer.appendChild(jobElement);
+            });
+        }
+
+        // Function to add a new job
+        function addJob() {
+            const jobTitle = prompt("Enter the job title:");
+            const jobDescription = prompt("Enter the job description:");
+
+            if (jobTitle && jobDescription) {
+                jobs.push({ title: jobTitle, description: jobDescription });
+                displayJobs();
+            } else {
+                alert("Job title and description are required.");
+            }
+        }
+
+        // Display jobs on page load
+        window.onload = () => {
+            displayJobs();
+            document.getElementById('add-job-button').onclick = addJob;
+        };
+    </script>
+</body>
+</html>
